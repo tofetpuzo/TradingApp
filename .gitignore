@@ -23,3 +23,5 @@ qrc_*
 *.log
 .DS_Store
 Thumbs.db
+*.clang-format
+
