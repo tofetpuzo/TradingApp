@@ -1,3 +1,7 @@
+ FPM4028155787FC
+
+
+
 Java service prompt
 
 Harden the trade-exception EXECUTE path in the Java service for exactly-once behaviour. The
@@ -100,7 +104,8 @@ configurable; hard-code nothing.
    redelivery until terminal. Safe because execute is idempotent. Track and implement separately.
 
 
-### Python service prompt
+
+## Python service prompt
 
 Harden the trade-exception EXECUTE endpoint in the Python service for exactly-once execution.
 Java calls this endpoint (behind Retry + CircuitBreaker) to trigger a real DB side effect, so a
