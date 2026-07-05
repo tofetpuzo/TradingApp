@@ -98,7 +98,9 @@ configurable; hard-code nothing.
    executeResolution) RE-DRIVES steps left non-terminal after a crash, instead of firing once.
    Options: scheduled scan for non-terminal steps, startup scan for IN_PROGRESS, or a queue with
    redelivery until terminal. Safe because execute is idempotent. Track and implement separately.
-Python service prompt
+
+
+### Python service prompt
 
 Harden the trade-exception EXECUTE endpoint in the Python service for exactly-once execution.
 Java calls this endpoint (behind Retry + CircuitBreaker) to trigger a real DB side effect, so a
@@ -141,4 +143,3 @@ below. Keep env values (DB config, ports) configurable; hard-code nothing.
       stored DONE result and returns it without re-executing.
    4. On execution failure, the response clearly indicates failure and no partial/duplicate side
       effect is left behind.
-Both hinge on the same Idempotency-Key (your per-execution id). If each side implements its half, exactly-once holds end to end. These are ready to hand off.
