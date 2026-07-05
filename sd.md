@@ -1,8 +1,5 @@
- FPM4028155787FC
 
-
-
-Java service prompt
+## Java service prompt
 
 Harden the trade-exception EXECUTE path in the Java service for exactly-once behaviour. The
 execute call triggers a real side effect (a DB action on the Python side) and sits behind
