@@ -27,5 +27,10 @@ namespace trading {
 	using quantity = double;
 	using order_id = uint64_t;
 	using timestamp = std::chrono::steady_clock::time_point;
+
+	enum class Side : uint8_t {
+		buy, 
+		sell
+	};
 }
 
